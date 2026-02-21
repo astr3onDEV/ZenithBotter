@@ -20,6 +20,9 @@ Install Dependencies
 ```sh
 npm install
 ```
+
+### Step 3
+
 ## Download Python (v3.11.9)
 
 
