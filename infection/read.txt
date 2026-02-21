@@ -1,0 +1,5 @@
+-- U need to Have A Model Bypass, like ('CoreTextSystem', 'EZConfig')
+-- Edit The Bypass, Require, To Your Id
+-- Make It .rbxm
+-- Name It "Infection.rbxm"
+-- enjoyy
