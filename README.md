@@ -25,9 +25,6 @@ npm install
 
 ## Download Python (v3.11.9)
 
-
-### Step 3
-
 ```sh
 run main.py
 ```
