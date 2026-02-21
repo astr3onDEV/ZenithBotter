@@ -26,7 +26,7 @@ npm install
 ## Download Python (v3.11.9)
 
 ```sh
-run main.py
+run main.py or run.bat
 ```
 
 *Thank You For Using Zenith Botter*
