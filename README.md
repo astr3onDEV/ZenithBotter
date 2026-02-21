@@ -28,6 +28,10 @@ npm install
 ```sh
 run main.bat
 ```
+And Then
+```sh
+run Zenith.py
+```
 
 *Thank You For Using Zenith Botter*
 *Contact Me @.astris On Discord*
