@@ -31,3 +31,8 @@ run main.bat
 
 *Thank You For Using Zenith Botter*
 *Contact Me @.astris On Discord*
+
+## IMPORTANT
+
+*Insert Your Cookies In cookies.txt*
+*Open Infection Folder Add Your Infection.rbxm*
