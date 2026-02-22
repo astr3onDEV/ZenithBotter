@@ -15,41 +15,39 @@ import logging
 import random
 import tempfile
 from colorama import init, Fore, Back, Style
-
-# Initialize colorama for Windows support
 init(autoreset=True)
-
-# Custom formatter with colors
 class ColoredFormatter(logging.Formatter):
     def format(self, record):
-        # Save original levelname
         original_levelname = record.levelname
         original_msg = record.msg
-        
-        # Add colors based on level
         if record.levelno == logging.INFO:
+            
             record.levelname = f"{Fore.CYAN}{record.levelname}{Style.RESET_ALL}"
+
+# lmao lamo skdiadjiwjdwij
+            
             record.msg = f"{Fore.CYAN}{record.msg}{Style.RESET_ALL}"
+            
         elif record.levelno == logging.WARNING:
             record.levelname = f"{Fore.YELLOW}{record.levelname}{Style.RESET_ALL}"
             record.msg = f"{Fore.YELLOW}{record.msg}{Style.RESET_ALL}"
         elif record.levelno == logging.ERROR:
+            
             record.levelname = f"{Fore.RED}{record.levelname}{Style.RESET_ALL}"
+            
             record.msg = f"{Fore.RED}{record.msg}{Style.RESET_ALL}"
+            
         elif record.levelno == logging.DEBUG:
             record.levelname = f"{Fore.MAGENTA}{record.levelname}{Style.RESET_ALL}"
             record.msg = f"{Fore.MAGENTA}{record.msg}{Style.RESET_ALL}"
         
-        # Format the message
         result = super().format(record)
         
-        # Restore original values
         record.levelname = original_levelname
         record.msg = original_msg
         
         return result
 
-# Setup logging with colored formatter
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 handler = logging.StreamHandler(sys.stdout)
@@ -268,14 +266,11 @@ class RobloxAPI:
             with open(temp_model_path, 'wb') as f:
                 f.write(model_buffer)
 
-            # Escape backslashes in path for JavaScript string - using replace
             escaped_path = temp_model_path.replace('\\', '\\\\')
             
-            # Escape special characters in name and description
             escaped_name = name.replace('`', '\\`').replace('$', '\\$')
             escaped_description = description.replace('`', '\\`').replace('$', '\\$')
             
-            # Build the script without using f-string for the main content
             script_lines = [
                 "const noblox = require('noblox.js');",
                 "const fs = require('fs');",
@@ -310,7 +305,6 @@ class RobloxAPI:
             )
             stdout, stderr = await process.communicate()
 
-            # Clean up temp files
             try:
                 os.unlink(temp_model_path)
                 os.unlink(temp_script_path)
@@ -448,7 +442,6 @@ class ModelProcessor:
         await self.upload_queue.drain()
 
     async def run(self) -> None:
-        # Print banner at startup
         print_banner()   
         cookie_path = Path(self.config.COOKIE_FILE)
         if not cookie_path.exists():
@@ -512,3 +505,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
