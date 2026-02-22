@@ -24,13 +24,11 @@ npm install
 ### Step 3
 
 ## Download Python (v3.11.9)
+## Install dependencies
 
 ```sh
-run main.bat
-```
-And Then
-```sh
-run Zenith.py
+main.bat
+python Zenith.py
 ```
 
 *Thank You For Using Zenith Botter*
